@@ -213,6 +213,8 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: postgres-pvc
+  labels:
+    app.kubernetes.io/part-of: my-app
 spec:
   accessModes:
     - ReadWriteOnce
