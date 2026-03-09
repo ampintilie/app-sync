@@ -250,6 +250,8 @@ spec:
           env:
             - name: PGDATA
               value: /var/lib/postgresql/data/pgdata
+            - name: POSTGRES_INITDB_ARGS
+              value: "--allow-group-access"
           envFrom:
             - secretRef:
                 name: postgres-secret
